@@ -171,7 +171,7 @@ img {
     color: var(--text-color-dark);
     font-size: 1.2rem;
     transition: all var(--transition-speed);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(153, 0, 255);
 }
 
 .light-mode .social-icon {
@@ -391,7 +391,7 @@ img {
 
 .about-image img {
     border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 30px rgb(153, 0, 255);
 }
 
 .about-text h3 {
@@ -748,7 +748,7 @@ img {
     background-color: var(--card-bg-dark);
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 5px rgb(153, 0, 255);
     transition: all var(--transition-speed);
 }
 
@@ -892,7 +892,7 @@ img {
     background-color: var(--card-bg-dark);
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 5px rgba(153, 0, 255);
     transition: all var(--transition-speed);
 }
 

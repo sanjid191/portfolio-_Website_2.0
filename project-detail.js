@@ -36,9 +36,9 @@ const projectsData = [
             "assets/images/portfolio/EMS-C01.png",
             "assets/images/portfolio/EMS-C02.png",
             "assets/images/portfolio/EMS-C03.png",
-            "assets/images/portfolio/EMS-C04.png",
-            "assets/images/portfolio/EMS-C05.png",
-            "assets/images/portfolio/EMS-C06.png"
+            "assets/images/portfolio/EMS-CDS01.png",
+            "assets/images/portfolio/EMS-CDS02.png",
+            "assets/images/portfolio/EMS-CDS03.png"
         ]
     },
     {
@@ -71,12 +71,12 @@ const projectsData = [
             { name: "Cloud Functions", icon: "fas fa-cloud" }
         ],
         gallery: [
-            "https://via.placeholder.com/600x400?text=Dashboard",
-            "https://via.placeholder.com/600x400?text=Workout+Plan",
-            "https://via.placeholder.com/600x400?text=Progress+Charts",
-            "https://via.placeholder.com/600x400?text=Nutrition+Tracker",
-            "https://via.placeholder.com/600x400?text=Social+Feed",
-            "https://via.placeholder.com/600x400?text=Exercise+Library"
+            "assets/images/portfolio/CGPAC-01.png",
+            "assets/images/portfolio/CGPAC-02.png",
+            "assets/images/portfolio/CGPAC-03.png",
+            "assets/images/portfolio/FP-01.png",
+            "assets/images/portfolio/FP-02.png",
+            "assets/images/portfolio/FP-03.png"
         ]
     },
     {
@@ -108,12 +108,12 @@ const projectsData = [
             { name: "After Effects", icon: "fab fa-adobe" }
         ],
         gallery: [
-            "https://via.placeholder.com/600x400?text=Logo+Design",
-            "https://via.placeholder.com/600x400?text=Color+Palette",
-            "https://via.placeholder.com/600x400?text=Typography",
-            "https://via.placeholder.com/600x400?text=Business+Cards",
-            "https://via.placeholder.com/600x400?text=Brand+Guidelines",
-            "https://via.placeholder.com/600x400?text=Application+Mockups"
+            "assets/images/portfolio/Screenshot 2023-06-20 212553.png",
+            "assets/images/portfolio/Screenshot 2023-06-20 212624.png",
+            "assets/images/portfolio/Screenshot 2023-06-20 212651.png",
+            "assets/images/portfolio/Screenshot 2023-06-20 213219.png",
+            "assets/images/portfolio/Screenshot 2023-06-20 213541.png",
+            "assets/images/portfolio/Screenshot 2023-06-20 213609.png"
         ]
     },
     {
@@ -147,12 +147,12 @@ const projectsData = [
             { name: "AWS", icon: "fab fa-aws" }
         ],
         gallery: [
-            "https://via.placeholder.com/600x400?text=Dashboard",
-            "https://via.placeholder.com/600x400?text=Task+Board",
-            "https://via.placeholder.com/600x400?text=Calendar+View",
-            "https://via.placeholder.com/600x400?text=Reporting",
-            "https://via.placeholder.com/600x400?text=Team+Chat",
-            "https://via.placeholder.com/600x400?text=Mobile+Interface"
+            "assets/images/portfolio/web-02.png",
+            "assets/images/portfolio/web-03.png",
+            "assets/images/portfolio/Pro-Web-Dep-01.png",
+            "assets/images/portfolio/portfolio-1.jpg",
+            "assets/images/portfolio/portfolio-details-1.jpg",
+            "assets/images/portfolio/EMS-CDS04.png"
         ]
     }
 ];
@@ -236,9 +236,9 @@ function displayProjectDetails(project) {
             <div class="project-gallery">
                 <h3 class="gallery-title">Project Gallery</h3>
                 <div class="gallery-grid">
-                    ${project.gallery.map(image => `
-                        <div class="gallery-item">
-                            <img src="${image}" alt="Project Screenshot" class="gallery-image">
+                    ${project.gallery.map((image, index) => `
+                        <div class="gallery-item" data-image-index="${index}">
+                            <img src="${image}" alt="Project Screenshot ${index + 1}" class="gallery-image">
                         </div>
                     `).join('')}
                 </div>
@@ -261,6 +261,9 @@ function displayProjectDetails(project) {
     
     // Update the page content
     document.getElementById('project-content').innerHTML = projectContent;
+    
+    // Initialize the lightbox for this project
+    initLightbox(project.gallery);
     
     // Update the page title
     document.title = `${project.title} | Sanjid Ahmmed Portfolio`;
@@ -388,3 +391,167 @@ function initNavigation() {
         });
     });
 }
+
+// Lightbox functionality
+let currentImageIndex = 0;
+let galleryImages = [];
+
+function initLightbox(images) {
+    galleryImages = images;
+    
+    // Add click event listeners to gallery items
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    galleryItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const imageIndex = parseInt(this.dataset.imageIndex);
+            openLightbox(imageIndex);
+        });
+    });
+    
+    // Add event listeners to lightbox controls
+    document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+    document.getElementById('lightbox-prev').addEventListener('click', showPrevImage);
+    document.getElementById('lightbox-next').addEventListener('click', showNextImage);
+    
+    // Close lightbox when clicking outside the image
+    document.getElementById('lightbox').addEventListener('click', function(e) {
+        if (e.target === this) {
+            closeLightbox();
+        }
+    });
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+        const lightbox = document.getElementById('lightbox');
+        if (lightbox.classList.contains('active')) {
+            switch(e.key) {
+                case 'Escape':
+                    closeLightbox();
+                    break;
+                case 'ArrowLeft':
+                    showPrevImage();
+                    break;
+                case 'ArrowRight':
+                    showNextImage();
+                    break;
+            }
+        }
+    });
+}
+
+function openLightbox(imageIndex) {
+    currentImageIndex = imageIndex;
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    const currentCounter = document.getElementById('lightbox-current');
+    const totalCounter = document.getElementById('lightbox-total');
+    
+    // Set the image source
+    lightboxImage.src = galleryImages[currentImageIndex];
+    
+    // Update counter
+    currentCounter.textContent = currentImageIndex + 1;
+    totalCounter.textContent = galleryImages.length;
+    
+    // Show/hide navigation buttons
+    updateNavigationButtons();
+    
+    // Show lightbox
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+}
+
+function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    lightbox.classList.remove('active');
+    document.body.style.overflow = ''; // Restore scrolling
+}
+
+function showPrevImage() {
+    if (currentImageIndex > 0) {
+        currentImageIndex--;
+        updateLightboxImage();
+    }
+}
+
+function showNextImage() {
+    if (currentImageIndex < galleryImages.length - 1) {
+        currentImageIndex++;
+        updateLightboxImage();
+    }
+}
+
+function updateLightboxImage() {
+    const lightboxImage = document.getElementById('lightbox-image');
+    const currentCounter = document.getElementById('lightbox-current');
+    
+    // Add fade effect
+    lightboxImage.style.opacity = '0';
+    
+    setTimeout(() => {
+        lightboxImage.src = galleryImages[currentImageIndex];
+        lightboxImage.style.opacity = '1';
+        currentCounter.textContent = currentImageIndex + 1;
+        updateNavigationButtons();
+    }, 150);
+}
+
+function updateNavigationButtons() {
+    const prevBtn = document.getElementById('lightbox-prev');
+    const nextBtn = document.getElementById('lightbox-next');
+    
+    // Hide previous button if at first image
+    if (currentImageIndex === 0) {
+        prevBtn.style.opacity = '0.3';
+        prevBtn.style.cursor = 'not-allowed';
+    } else {
+        prevBtn.style.opacity = '1';
+        prevBtn.style.cursor = 'pointer';
+    }
+    
+    // Hide next button if at last image
+    if (currentImageIndex === galleryImages.length - 1) {
+        nextBtn.style.opacity = '0.3';
+        nextBtn.style.cursor = 'not-allowed';
+    } else {
+        nextBtn.style.opacity = '1';
+        nextBtn.style.cursor = 'pointer';
+    }
+}
+
+// Touch/swipe support for mobile devices
+let touchStartX = 0;
+let touchEndX = 0;
+
+function handleTouchStart(e) {
+    touchStartX = e.changedTouches[0].screenX;
+}
+
+function handleTouchEnd(e) {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+}
+
+function handleSwipe() {
+    const swipeThreshold = 50;
+    const diff = touchStartX - touchEndX;
+    
+    if (Math.abs(diff) > swipeThreshold) {
+        if (diff > 0) {
+            // Swiped left - show next image
+            showNextImage();
+        } else {
+            // Swiped right - show previous image
+            showPrevImage();
+        }
+    }
+}
+
+// Add touch event listeners to lightbox image
+document.addEventListener('DOMContentLoaded', function() {
+    const lightboxImage = document.getElementById('lightbox-image');
+    if (lightboxImage) {
+        lightboxImage.addEventListener('touchstart', handleTouchStart, { passive: true });
+        lightboxImage.addEventListener('touchend', handleTouchEnd, { passive: true });
+    }
+});
