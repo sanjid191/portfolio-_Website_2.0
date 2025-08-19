@@ -2,15 +2,15 @@
 const projectsData = [
     {
         id: 1,
-        title: "E-commerce Website",
+        title: "Path2Pro: Academic and Skill Development Platfor",
         category: "web",
         client: "RetailCorp Inc.",
         completionDate: "May 2025",
         //mainImage: "https://via.placeholder.com/1200x600",
         mainImage: "assets/images/Up Coming.png",
-        demoLink: "https://demo-ecommerce.example.com",
-        githubLink: "https://github.com/username/ecommerce-project",
-        description: "A comprehensive e-commerce platform built with modern web technologies. This project features a responsive design, user authentication system, product catalog with advanced filtering, shopping cart functionality, payment integration, and an admin dashboard for product and order management.",
+        //demoLink: "https://demo-ecommerce.example.com",
+        githubLink: "https://github.com/msahid-cse/Path2Pro1.0",
+        description: "The Path2Pro is a comprehensive online platform designed to revolutionize the educational experience. It serves as a centralized hub for students, faculty, and staff, offering a wide range of features to enhance learning, foster collaboration, and streamline administrative processes. The platform aims to create a dynamic and engaging learning environment that empowers students to succeed academically and professionally",
         longDescription: "This e-commerce platform was designed to provide a seamless shopping experience across all devices. The project involved extensive planning and research to meet the client's specific requirements. The frontend was developed using React.js with Redux for state management, while the backend API was built using Node.js and Express. MongoDB was chosen as the database for its flexibility in handling product data with varying attributes.\n\nThe application includes multiple user roles (customer, manager, admin) with different permission levels, real-time inventory tracking, wishlist functionality, and integration with popular payment gateways including Stripe and PayPal. A key challenge was optimizing performance for large product catalogs, which was solved by implementing lazy loading, image optimization, and server-side caching.",
         features: [
             "User authentication and profile management",
