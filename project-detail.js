@@ -8,7 +8,7 @@ const projectsData = [
         completionDate: "May 2025",
         //mainImage: "https://via.placeholder.com/1200x600",
         mainImage: "assets/images/Up Coming.png",
-        demoLink: "https://demo-ecommerce.example.com",
+        //demoLink: "https://demo-ecommerce.example.com",
         githubLink: "https://github.com/msahid-cse/Path2Pro1.0",
         description: "The Path2Pro is a comprehensive online platform designed to revolutionize the educational experience. It serves as a centralized hub for students, faculty, and staff, offering a wide range of features to enhance learning, foster collaboration, and streamline administrative processes. The platform aims to create a dynamic and engaging learning environment that empowers students to succeed academically and professionally",
         longDescription: "-",
@@ -27,7 +27,6 @@ const projectsData = [
         ],
         technologies: [
             { name: "React", icon: "fab fa-react" },
-            { name: "Node.js", icon: "fab fa-node-js" },
             { name: "MongoDB", icon: "fas fa-database" },
             { name: "Express", icon: "fab fa-node-js" },
             { name: "Redux", icon: "fas fa-code" },
@@ -36,12 +35,12 @@ const projectsData = [
             { name: "AWS S3", icon: "fab fa-aws" }
         ],
         gallery: [
-            "assets/images/portfolio/EMS-C01.png",
-            "assets/images/portfolio/EMS-C02.png",
-            "assets/images/portfolio/EMS-C03.png",
-            "assets/images/portfolio/EMS-CDS01.png",
-            "assets/images/portfolio/EMS-CDS02.png",
-            "assets/images/portfolio/EMS-CDS03.png"
+            "assets/images/portfolio/R2P-1.png",
+            "assets/images/portfolio/R2P-2.png",
+            "assets/images/portfolio/R2P-3.png",
+            "assets/images/portfolio/R2P-4.png",
+            "assets/images/portfolio/R2P-5.png",
+            "assets/images/portfolio/R2P-6.png"
         ]
     },
     {
@@ -56,22 +55,20 @@ const projectsData = [
         description: "It's a Java project that uses a graphical user interface (GUI) to allow users to manage employee data stored in a MySQL database. The system allows users to add, edit, delete & view employee information, as well as view the login information for both admins and employees and also there are many more features.",
         longDescription: "-",
         features: [
-            "Personalized workout plans",
-            "Progress tracking with visual charts",
-            "Calorie and nutrition tracking",
-            "Integration with fitness wearables",
-            "Social features and challenges",
-            "Offline mode for workouts without internet",
-            "Video tutorials for exercises",
-            "Reminder and notification system"
+            "Graphical User Interface (GUI) for intuitive user interaction",
+            "Secure MySQL database integration for data storage",
+            "Add, edit, and delete employee records seamlessly",
+            "View comprehensive employee information and profiles",
+            "Dual-view login information for both admins and employees",
+            "Role-based access control for administrative functions",
+            "Data validation to ensure information accuracy",
+            "Search and filter capabilities to quickly find employees"
         ],
         technologies: [
-            { name: "React Native", icon: "fab fa-react" },
-            { name: "Firebase", icon: "fas fa-fire" },
-            { name: "Redux", icon: "fas fa-code" },
-            { name: "Google Fit API", icon: "fab fa-google" },
-            { name: "Apple HealthKit", icon: "fab fa-apple" },
-            { name: "Cloud Functions", icon: "fas fa-cloud" }
+            { name: "Java", icon: "fab fa-java" },
+            { name: "Java Swing", icon: "fas fa-fire" },
+            { name: "MySQL", icon: "fas fa-database" },
+            
         ],
         gallery: [
             "assets/images/portfolio/CGPAC-01.png",
@@ -84,78 +81,70 @@ const projectsData = [
     },
     {
         id: 3,
-        title: "Brand Identity Design",
-        category: "design",
-        client: "GreenEco Solutions",
+        title: "CryptoVisualizer",
+        category: "Web",
+        client: "Course Project",
         completionDate: "January 2025",
         mainImage: "https://via.placeholder.com/1200x600",
-        demoLink: "https://behance.net/username/greenecoproject",
-        githubLink: null,
-        description: "Complete brand identity design including logo, color palette, and guidelines.",
-        longDescription: "This comprehensive brand identity project was created for GreenEco Solutions, a sustainable energy startup looking to establish a strong and recognizable presence in the renewable energy market. The project began with extensive market research and competitor analysis to identify opportunities for differentiation.\n\nThe design process included developing multiple concepts that reflected the client's core values of sustainability, innovation, and accessibility. After client consultations and refinements, the final brand identity was developed with a modern, clean aesthetic that incorporated natural elements and a vibrant yet professional color palette.\n\nThe deliverables included a versatile primary logo with variations for different applications, a comprehensive color palette with primary and secondary colors, custom typography guidelines, iconography, and a detailed brand usage guide to ensure consistency across all marketing materials and digital platforms.",
+        demoLink: "https://cryptovisualizer.netlify.app/",
+        githubLink: "https://github.com/sanjid191/CryptoVisualizer",
+        description: "Demystify the principles of cryptography by providing a visual representation.",
+        longDescription: "The CryptoVisualizer is an interactive platform designed to demystify the principles of cryptography by providing a practical, visual representation of various cryptographic methods. In an era where data security is paramount, this platform seeks to enhance the understanding of encryption and decryption mechanisms, making cryptography accessible to learners, professionals, and enthusiasts alike.",
+
         features: [
-            "Logo design with multiple variations",
-            "Comprehensive color palette",
-            "Typography selection and guidelines",
-            "Brand pattern and texture design",
-            "Stationery design (business cards, letterheads)",
-            "Social media templates",
-            "Brand usage guidelines document",
-            "Digital and print application mockups"
+            "Interactive visualizations of encryption and decryption processes",
+            "Real-time animated demonstrations of cryptographic algorithms",
+            "Hands-on exploration of various cryptographic methods (e.g., AES, RSA, DES)",
+            "User-friendly interface designed for learners and professionals",
+            "Side-by-side comparison of plaintext, ciphertext, and keys",
+            "Step-by-step breakdown of complex cryptographic operations",
+            "Cryptanalysis tools to demonstrate vulnerabilities and attacks",
+            "Educational content and explanations integrated with visual tools"
         ],
         technologies: [
-            { name: "Adobe Illustrator", icon: "fab fa-adobe" },
-            { name: "Adobe Photoshop", icon: "fab fa-adobe" },
-            { name: "Figma", icon: "fab fa-figma" },
-            { name: "InDesign", icon: "fab fa-adobe" },
-            { name: "After Effects", icon: "fab fa-adobe" }
+            { name: "HTML", icon: "fab fa-html5" },
+            { name: "CSS", icon: "fab fa-css3" },
+            { name: "JavaScript", icon: "fas fa-js" },
         ],
         gallery: [
-            "assets/images/portfolio/Screenshot 2023-06-20 212553.png",
-            "assets/images/portfolio/Screenshot 2023-06-20 212624.png",
-            "assets/images/portfolio/Screenshot 2023-06-20 212651.png",
-            "assets/images/portfolio/Screenshot 2023-06-20 213219.png",
-            "assets/images/portfolio/Screenshot 2023-06-20 213541.png",
-            "assets/images/portfolio/Screenshot 2023-06-20 213609.png"
+            "assets/images/portfolio/1.png",
+            "assets/images/portfolio/2.png",
+            "assets/images/portfolio/3.png",
+            "assets/images/portfolio/4.png",
+            "assets/images/portfolio/5.png",
+           
         ]
     },
     {
         id: 4,
         title: "Task Management System",
         category: "web",
-        client: "WorkSmart Inc.",
-        completionDate: "April 2025",
-        mainImage: "https://via.placeholder.com/1200x600",
-        demoLink: "https://task-system.example.com",
-        githubLink: "https://github.com/username/task-management",
-        description: "A collaborative task management platform for teams with real-time updates.",
-        longDescription: "The Task Management System was designed to streamline workflow and enhance collaboration among distributed teams. Built with Vue.js on the frontend and Express on the backend, this application provides real-time task updates and communication features to ensure team members stay synchronized.\n\nThe platform includes project management tools with customizable workflows, task assignment and tracking, time tracking, file sharing capabilities, and reporting features for project progress analysis. Socket.io was implemented to enable real-time notifications and updates without requiring page refreshes, creating a seamless collaborative environment.\n\nOne significant challenge was designing a flexible permission system that could accommodate various team structures and hierarchies. This was resolved by implementing a role-based access control system with customizable permission sets that could be assigned to different team members based on their responsibilities.",
+        client: "Own Project",
+        completionDate: "15 March 2024",
+        mainImage: "assets/images/portfolio/CGPA_Calculation.jpg",
+        demoLink: "https://cgpacalculationgub.netlify.app/",
+        githubLink: "https://github.com/sanjid191/CGPA-calculation",
+        description: "A tool to calculate CGPA scores for students.",
+        longDescription: "Stuck juggling grades and semester averages? This website simplifies student life with a user-friendly CGPA calculator. Input your course credits and grades, and it will instantly calculate your semester GPA and overall CGPA. No more manual calculations - this tool keeps you informed of your academic standing and even estimates your graduation class (at some universities). Focus on your studies, let the website handle the number crunching.",
         features: [
-            "Customizable project workflows and boards",
-            "Real-time task updates and notifications",
-            "Time tracking with reporting",
-            "File sharing and document management",
-            "Team chat and collaboration tools",
-            "Calendar integration and deadline reminders",
-            "Advanced filtering and search capabilities",
-            "Performance and progress analytics"
+            "User-friendly CGPA and GPA calculator interface",
+            "Instant semester GPA calculation with credit input",
+            "Automatic overall CGPA tracking across semesters",
+            "Graduation class estimation (for applicable universities)",
+            "Real-time academic standing updates",
+            "Simplified grade and credit input system",
+            "Eliminates manual calculation errors",
+            "Helps students focus on studies by handling number crunching"
         ],
         technologies: [
-            { name: "Vue.js", icon: "fab fa-vuejs" },
-            { name: "Express", icon: "fab fa-node-js" },
-            { name: "Socket.io", icon: "fas fa-plug" },
-            { name: "PostgreSQL", icon: "fas fa-database" },
-            { name: "Redis", icon: "fas fa-database" },
-            { name: "Docker", icon: "fab fa-docker" },
-            { name: "AWS", icon: "fab fa-aws" }
+            { name: "HTML", icon: "fab fa-html5" },
+            { name: "CSS", icon: "fab fa-css3" },
+            { name: "JavaScript", icon: "fas fa-js" },
         ],
         gallery: [
-            "assets/images/portfolio/web-02.png",
-            "assets/images/portfolio/web-03.png",
-            "assets/images/portfolio/Pro-Web-Dep-01.png",
-            "assets/images/portfolio/portfolio-1.jpg",
-            "assets/images/portfolio/portfolio-details-1.jpg",
-            "assets/images/portfolio/EMS-CDS04.png"
+            "assets/images/portfolio/CGPAC-01.png",
+            "assets/images/portfolio/CGPAC-02.png",
+            "assets/images/portfolio/CGPAC-03.png",
         ]
     }
 ];
