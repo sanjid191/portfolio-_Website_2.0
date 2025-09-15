@@ -38,6 +38,38 @@ marquee{
 
 }
 
+.scroll-arrow {
+      position: fixed;
+      right: 32px;
+      bottom: 48px;
+      z-index: 1002;
+      width: 54px;
+      height: 54px;
+      background: #4cc9f0;
+      color: #fff;
+      border-radius: 50%;
+      box-shadow: 0 4px 16px rgba(76,201,240,0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      opacity: 0.92;
+    }
+    .scroll-arrow:hover {
+      background: #4361ee;
+      transform: scale(1.08);
+    }
+    @media (max-width: 600px) {
+      .scroll-arrow {
+        right: 12px;
+        bottom: 18px;
+        width: 44px;
+        height: 44px;
+        font-size: 1.5rem;
+      }
+    }
 
 * {
     margin: 0;

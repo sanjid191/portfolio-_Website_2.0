@@ -331,3 +331,31 @@ window.onload = function() {
     });
 };
 
+// Floating scroll arrow logic
+    (function() {
+      const arrow = document.getElementById('scrollArrow');
+      const arrowIcon = arrow.querySelector('i');
+      function checkFooter() {
+        const footer = document.querySelector('footer');
+        const rect = footer.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 80) {
+          arrowIcon.classList.remove('fa-arrow-down');
+          arrowIcon.classList.add('fa-arrow-up');
+          arrow.setAttribute('data-direction', 'up');
+        } else {
+          arrowIcon.classList.remove('fa-arrow-up');
+          arrowIcon.classList.add('fa-arrow-down');
+          arrow.setAttribute('data-direction', 'down');
+        }
+      }
+      window.addEventListener('scroll', checkFooter);
+      window.addEventListener('resize', checkFooter);
+      arrow.addEventListener('click', function() {
+        if (arrow.getAttribute('data-direction') === 'down') {
+          window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
+        } else {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      });
+      checkFooter();
+    })();
