@@ -1,3 +1,32 @@
+
+
+//geting form data and sending to google sheet from COntuct form
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let formData = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        subject: document.getElementById("subject").value,
+        message: document.getElementById("message").value
+    };
+
+    fetch("https://script.google.com/macros/s/AKfycbw6sklcSSDWKkCJmS6lg9G0v0KFnPWDFFb76jRb7UQ76jyBQ1S2JdDSNc_jApFNJDw0/exec", {
+        method: "POST",
+        body: JSON.stringify(formData)
+    })
+    .then(res => res.json())
+    .then(data => {
+        alert("✅ Message sent successfully!");
+        document.getElementById("contactForm").reset();
+    })
+    .catch(err => {
+        console.error(err);
+        alert("❌ Error sending message.");
+    });
+});
+
+
 // Wait for the DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Theme toggle functionality
