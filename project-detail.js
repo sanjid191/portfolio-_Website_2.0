@@ -6,8 +6,8 @@ const projectsData = [
         category: "web",
         client: "RetailCorp Inc.",
         completionDate: "May 2025",
-        //mainImage: "https://via.placeholder.com/1200x600",
-        mainImage: "assets/images/Up Coming.png",
+        mainImage: "assets/images/R2PC.png",
+        //mainImage: "assets/images/Up Coming.png",
         //demoLink: "https://demo-ecommerce.example.com",
         githubLink: "https://github.com/msahid-cse/Path2Pro1.0",
         description: "The Path2Pro is a comprehensive online platform designed to revolutionize the educational experience. It serves as a centralized hub for students, faculty, and staff, offering a wide range of features to enhance learning, foster collaboration, and streamline administrative processes. The platform aims to create a dynamic and engaging learning environment that empowers students to succeed academically and professionally",
@@ -49,7 +49,7 @@ const projectsData = [
         category: "Desktop Application",
         //client: "FitLife Technologies",
         completionDate: "March 2025",
-        mainImage: "https://via.placeholder.com/1200x600",
+        mainImage: "assets/images/Java_EMP.png",
         //demoLink: "https://fitlife-app.example.com",
         githubLink: "https://github.com/sanjid191/Employee_Management_System_with_GUI_and_MySQL",
         description: "It's a Java project that uses a graphical user interface (GUI) to allow users to manage employee data stored in a MySQL database. The system allows users to add, edit, delete & view employee information, as well as view the login information for both admins and employees and also there are many more features.",
@@ -85,7 +85,7 @@ const projectsData = [
         category: "Web",
         client: "Course Project",
         completionDate: "January 2025",
-        mainImage: "https://via.placeholder.com/1200x600",
+        mainImage: "assets/images/CryptoVisualizer_C.png",
         demoLink: "https://cryptovisualizer.netlify.app/",
         githubLink: "https://github.com/sanjid191/CryptoVisualizer",
         description: "Demystify the principles of cryptography by providing a visual representation.",
@@ -121,7 +121,7 @@ const projectsData = [
         category: "web",
         client: "Own Project",
         completionDate: "15 March 2024",
-        mainImage: "assets/images/portfolio/CGPA_Calculation.jpg",
+        mainImage: "assets/images/CGPA_C.png",
         demoLink: "https://cgpacalculationgub.netlify.app/",
         githubLink: "https://github.com/sanjid191/CGPA-calculation",
         description: "A tool to calculate CGPA scores for students.",
@@ -145,6 +145,42 @@ const projectsData = [
             "assets/images/portfolio/CGPAC-01.png",
             "assets/images/portfolio/CGPAC-02.png",
             "assets/images/portfolio/CGPAC-03.png",
+        ]
+    },
+    {
+        id: 5,
+        title: "2D Robot Soccer Simulation (Lightweight)",
+        category: "Course Project",
+        client: "Own Project",
+        completionDate: "15 March 2024",
+        mainImage: "assets/images/2D_C.png",
+        //demoLink: "https://cgpacalculationgub.netlify.app/",
+        githubLink: "https://github.com/sanjid191/Simple_2D_Robot_Soccer_Simulation",
+        description: "2D Robot Soccer Simulation (Lightweight)",
+        longDescription: "This project presents a comprehensive Robot Soccer Simulation, where two teams of robots (Blue and Red) compete in a virtual soccer match. The simulation is designed to demonstrate the integration of artificial intelligence, real-time graphics, and multi-agent pathfinding. It features realistic ball physics, robot movement using the A* pathfinding algorithm, and interactive user controls. The simulation is both an educational tool and a platform for experimenting with robotics and AI concepts.",
+        features: [
+            "Two-team (Blue vs. Red) robot soccer match simulation",
+            "Integration of artificial intelligence for robot decision-making",
+            "Real-time 2D graphics and visualization powered by Pygame",
+            "Multi-agent pathfinding using the A* algorithm",
+            "Realistic ball physics and collision detection",
+            "Interactive user controls to influence the match",
+            "Efficient grid calculations and management using NumPy",
+            "Educational tool for experimenting with robotics and AI strategies"
+        ],
+        technologies: [
+            { name: "Python", icon: "fab fa-python" },
+            { name: "Numpy", icon: "fab fa-numpy" },
+            { name: "Pygame", icon: "fas fa-gamepad" },
+            { name: "Matplotlib", icon: "fas fa-chart-bar" }
+        ],
+        gallery: [
+            "assets/images/portfolio/2DSG-1.png",
+            "assets/images/portfolio/2DSG-2.png",
+            "assets/images/portfolio/2DSG-3.png",
+            "assets/images/portfolio/2DSG-4.png",
+            "assets/images/portfolio/2DSG-5.png",
+            "assets/images/portfolio/2DSG-6.png"
         ]
     }
 ];
