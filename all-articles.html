@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Articles | Sanjid Ahmmed</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="all-articles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+</head>
+<body class="dark-mode">
+    <nav class="main-nav">
+        <div class="logo">SA</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#skills">Skills</a>
+            <a href="index.html#resume">Resume</a>
+            <a href="index.html#projects">Projects</a>
+            <a href="index.html#articles">Articles</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+    </nav>
+    <section class="section-padding">
+        <div class="section-container">
+            <h2 class="section-title">All Articles, Blogs & Writings</h2>
+            <a href="index.html#articles" class="cta-btn secondary" style="margin-bottom: 30px; display:inline-block;">&larr; Back to Home</a>
+            <div class="articles-search-sort">
+                <input type="text" id="searchInput" placeholder="Search by keyword...">
+                <select id="groupSelect">
+                    <option value="all">All Groups</option>
+                    <option value="blog">Blog</option>
+                    <option value="tutorial">Tutorial</option>
+                    <option value="opinion">Opinion</option>
+                    <option value="news">News</option>
+                </select>
+                <select id="sortSelect">
+                    <option value="latest">Sort by Latest</option>
+                    <option value="oldest">Sort by Oldest</option>
+                    <option value="az">A-Z</option>
+                    <option value="za">Z-A</option>
+                </select>
+            </div>
+            <div class="all-articles-list" id="allArticlesList">
+                <!-- Articles will be rendered here -->
+            </div>
+        </div>
+    </section>
+    <div id="devModal" class="dev-modal">
+      <div class="dev-modal-content">
+        <button id="closeDevModal" class="dev-modal-close">&times;</button>
+        <h3>🚧 Under Development</h3>
+        <p>This page is still under development and will be fully functional soon.<br>Thank you for showing interest.<br> Stay tuned!</p>
+      </div>
+    </div>
+    <script src="all-articles.js"></script>
+</body>
+</html>
