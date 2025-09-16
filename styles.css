@@ -191,6 +191,12 @@ img {
     transform: scale(1);
 }
 
+@media (max-width: 576px) {
+  .theme-toggle {
+    display: none !important;
+  }
+}
+
 /* ==========================================================================
    Social Sidebar
    ========================================================================== */
@@ -232,6 +238,31 @@ img {
 
 .light-mode .social-icon:hover {
     background-color: var(--primary-color-light);
+}
+
+@media (max-width: 576px) {
+  .social-sidebar {
+    left: 0;
+    bottom: 10px;
+    top: auto;
+    right: 0;
+    width: 100vw;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 10px;
+    position: fixed;
+    z-index: 90;
+    background: none;
+    pointer-events: auto;
+  }
+  .social-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+    margin: 0 2px;
+    box-shadow: none;
+  }
 }
 
 /* ==========================================================================
@@ -1399,14 +1430,17 @@ footer {
     .social-sidebar {
         flex-direction: row;
         left: 0;
-        bottom: 0;
-        top: unset;
-        transform: none;
-        width: 100%;
+        bottom: 10px;
+        top: auto;
+        right: 0;
+        width: 100vw;
         justify-content: center;
-        background-color: var(--card-bg-dark);
-        padding: 15px 0;
-        border-top: 1px solid var(--border-color-dark);
+        align-items: flex-end;
+        gap: 10px;
+        position: fixed;
+        z-index: 90;
+        background: none;
+        pointer-events: auto;
     }
     
     .light-mode .social-sidebar {
@@ -1415,9 +1449,11 @@ footer {
     }
     
     .social-icon {
-        width: 40px;
-        height: 40px;
+        width: 36px;
+        height: 36px;
         font-size: 1rem;
+        margin: 0 2px;
+        box-shadow: none;
     }
     
     .about-details {
